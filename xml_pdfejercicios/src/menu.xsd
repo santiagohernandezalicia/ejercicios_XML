@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="menu">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="plato"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="plato">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre"/>
+                <xs:element ref="precio"/>
+                <xs:element ref="descripcion"/>
+                <xs:element ref="calorias"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nombre" type="xs:string"/>
+    <xs:element name="precio" type="xs:decimal"/>
+    <xs:element name="descripcion" type="xs:string"/>
+    <xs:element name="calorias" type="xs:integer"/>
+</xs:schema>

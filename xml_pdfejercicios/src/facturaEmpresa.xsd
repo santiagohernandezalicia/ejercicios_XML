@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Invoice">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="BusinessInformation"/>
+                <xs:element ref="ClientInformation"/>
+                <xs:element ref="InvoiceDetails"/>
+                <xs:element ref="Items"/>
+                <xs:element ref="Summary"/>
+                <xs:element ref="CustomerMessage"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BusinessInformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="BusinessName"/>
+                <xs:element ref="Address"/>
+                <xs:element ref="Contact"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BusinessName" type="xs:string"/>
+    <xs:element name="Contact">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Phone"/>
+                <xs:element ref="Email"/>
+                <xs:element ref="Website"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Phone" type="xs:string"/>
+    <xs:element name="Email" type="xs:NCName"/>
+    <xs:element name="Website" type="xs:NCName"/>
+    <xs:element name="ClientInformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="BillTo"/>
+                <xs:element ref="ShipTo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BillTo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ClientName"/>
+                <xs:element ref="Address"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ShipTo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ClientName"/>
+                <xs:element ref="Address"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="InvoiceDetails">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="InvoiceNumber"/>
+                <xs:element ref="InvoiceDate"/>
+                <xs:element ref="Terms"/>
+                <xs:element ref="DueDate"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="InvoiceNumber" type="xs:integer"/>
+    <xs:element name="InvoiceDate" type="xs:string"/>
+    <xs:element name="Terms" type="xs:string"/>
+    <xs:element name="DueDate" type="xs:string"/>
+    <xs:element name="Items">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="Item"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Item">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ProductOrService"/>
+                <xs:element ref="Description"/>
+                <xs:element ref="Quantity"/>
+                <xs:element ref="Rate"/>
+                <xs:element ref="Amount"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ProductOrService" type="xs:string"/>
+    <xs:element name="Description" type="xs:string"/>
+    <xs:element name="Quantity" type="xs:integer"/>
+    <xs:element name="Rate" type="xs:integer"/>
+    <xs:element name="Amount" type="xs:integer"/>
+    <xs:element name="Summary">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Subtotal"/>
+                <xs:element ref="SalesTax"/>
+                <xs:element ref="Shipping"/>
+                <xs:element ref="Total"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Subtotal" type="xs:decimal"/>
+    <xs:element name="SalesTax" type="xs:decimal"/>
+    <xs:element name="Shipping" type="xs:decimal"/>
+    <xs:element name="Total" type="xs:decimal"/>
+    <xs:element name="CustomerMessage" type="xs:string"/>
+    <xs:element name="Address">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Street"/>
+                <xs:element ref="City"/>
+                <xs:element ref="State"/>
+                <xs:element ref="ZipCode"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Street" type="xs:string"/>
+    <xs:element name="City" type="xs:NCName"/>
+    <xs:element name="State" type="xs:NCName"/>
+    <xs:element name="ZipCode" type="xs:string"/>
+    <xs:element name="ClientName" type="xs:string"/>
+</xs:schema>

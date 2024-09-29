@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE arboles [
+        <!ELEMENT arboles (arbol)*>
+        <!ELEMENT arbol (nombre_cientifico|nombre_comun|vegetacion|altura|forma_estructura|color_primavera|resistencia_heladas|color_otonio)*>
+        <!ELEMENT nombre_cientifico (#PCDATA)>
+        <!ELEMENT nombre_comun (#PCDATA)>
+        <!ELEMENT vegetacion (#PCDATA)>
+        <!ELEMENT altura (#PCDATA)>
+        <!ELEMENT forma_estructura (copa|tronco|ramaje)*>
+        <!ELEMENT copa (#PCDATA)>
+        <!ELEMENT tronco (#PCDATA)>
+        <!ELEMENT ramaje (#PCDATA)>
+        <!ELEMENT color_primavera (haz|enves|haz_hojas_jovenes|haz_hojas_antiguas|enves_hojas_antiguas)*>
+        <!ELEMENT haz (#PCDATA)>
+        <!ELEMENT enves (#PCDATA)>
+        <!ELEMENT resistencia_heladas (#PCDATA)>
+        <!ELEMENT color_otonio (#PCDATA)>
+        <!ELEMENT haz_hojas_jovenes (#PCDATA)>
+        <!ELEMENT haz_hojas_antiguas (#PCDATA)>
+        <!ELEMENT enves_hojas_antiguas (#PCDATA)>
+        ]>
+<arboles>
+    <arbol>
+        <nombre_cientifico>Acer monspessulanum</nombre_cientifico>
+        <nombre_comun>Arce de Montpellier, Arce menor</nombre_comun>
+        <vegetacion>Caducifolio</vegetacion>
+        <altura>De 6 a 10 metros</altura>
+        <forma_estructura>
+            <copa>Copa esférica</copa>
+            <tronco>Tronco principal recto con bifurcaciones</tronco>
+            <ramaje>Ramaje colgante</ramaje>
+        </forma_estructura>
+        <color_primavera>
+            <haz>Haz verde brillante</haz>
+            <enves>Envés verde blanquecino</enves>
+        </color_primavera>
+        <resistencia_heladas>Heladas fuertes (hasta -15ºC)</resistencia_heladas>
+    </arbol>
+
+    <arbol>
+        <nombre_cientifico>Olea europaea</nombre_cientifico>
+        <nombre_comun>Olivo</nombre_comun>
+        <vegetacion>Perenne</vegetacion>
+        <altura>De 8 a 15 metros</altura>
+        <forma_estructura>
+            <copa>Copa irregular</copa>
+            <tronco>Tronco principal irregular con bifurcaciones</tronco>
+            <ramaje>Ramaje tortuoso</ramaje>
+        </forma_estructura>
+        <color_primavera>
+            <haz>Haz verde oscuro</haz>
+            <enves>Envés verde plateado</enves>
+        </color_primavera>
+        <resistencia_heladas>Heladas medias (hasta -10ºC)</resistencia_heladas>
+    </arbol>
+
+    <arbol>
+        <nombre_cientifico>Platanus orientalis</nombre_cientifico>
+        <nombre_comun>Platano</nombre_comun>
+        <vegetacion>Caducifolio</vegetacion>
+        <altura>De 20 a 25 metros</altura>
+        <forma_estructura>
+            <copa>Copa ovoidal</copa>
+            <tronco>Tronco principal recto</tronco>
+            <ramaje>Ramaje expandido</ramaje>
+        </forma_estructura>
+        <color_primavera>
+            <haz>Haz verde medio</haz>
+            <enves>Envés verde claro</enves>
+        </color_primavera>
+        <color_otonio>Ocre</color_otonio>
+        <resistencia_heladas>Heladas fuertes (hasta -20ºC)</resistencia_heladas>
+    </arbol>
+
+    <arbol>
+        <nombre_cientifico>Quercus ilex</nombre_cientifico>
+        <nombre_comun>Encina</nombre_comun>
+        <vegetacion>Perenne</vegetacion>
+        <altura>En torno a 25 metros</altura>
+        <forma_estructura>
+            <copa>Copa esférica o elíptica irregular</copa>
+            <tronco>Tronco principal recto</tronco>
+            <ramaje>Ramaje tortuoso</ramaje>
+        </forma_estructura>
+        <color_primavera>
+            <haz_hojas_jovenes>Plateado en hojas jóvenes</haz_hojas_jovenes>
+            <haz_hojas_antiguas>Haz verde oscuro</haz_hojas_antiguas>
+            <enves_hojas_antiguas>Envés plateado</enves_hojas_antiguas>
+        </color_primavera>
+        <resistencia_heladas>Heladas fuertes (hasta -15ºC)</resistencia_heladas>
+    </arbol>
+</arboles>

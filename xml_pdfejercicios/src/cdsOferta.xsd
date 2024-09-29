@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="cds_en_oferta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="cd"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="cd">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titulo"/>
+                <xs:element ref="artista"/>
+                <xs:element ref="pais"/>
+                <xs:element ref="discografica"/>
+                <xs:element ref="precio"/>
+                <xs:element ref="year_publicacion"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="titulo" type="xs:string"/>
+    <xs:element name="artista" type="xs:string"/>
+    <xs:element name="pais" type="xs:NCName"/>
+    <xs:element name="discografica" type="xs:string"/>
+    <xs:element name="precio" type="xs:decimal"/>
+    <xs:element name="year_publicacion" type="xs:integer"/>
+</xs:schema>

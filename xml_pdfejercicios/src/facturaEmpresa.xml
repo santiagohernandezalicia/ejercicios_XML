@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Invoice [
+        <!ELEMENT Invoice (BusinessInformation|ClientInformation|InvoiceDetails|Items|Summary|CustomerMessage)*>
+        <!ELEMENT BusinessInformation (BusinessName|Address|Contact)*>
+        <!ELEMENT BusinessName (#PCDATA)>
+        <!ELEMENT Address (Street|City|State|ZipCode)*>
+        <!ELEMENT Street (#PCDATA)>
+        <!ELEMENT City (#PCDATA)>
+        <!ELEMENT State (#PCDATA)>
+        <!ELEMENT ZipCode (#PCDATA)>
+        <!ELEMENT Contact (Phone|Email|Website)*>
+        <!ELEMENT Phone (#PCDATA)>
+        <!ELEMENT Email (#PCDATA)>
+        <!ELEMENT Website (#PCDATA)>
+        <!ELEMENT ClientInformation (BillTo|ShipTo)*>
+        <!ELEMENT BillTo (ClientName|Address)*>
+        <!ELEMENT ClientName (#PCDATA)>
+        <!ELEMENT ShipTo (ClientName|Address)*>
+        <!ELEMENT InvoiceDetails (InvoiceNumber|InvoiceDate|Terms|DueDate)*>
+        <!ELEMENT InvoiceNumber (#PCDATA)>
+        <!ELEMENT InvoiceDate (#PCDATA)>
+        <!ELEMENT Terms (#PCDATA)>
+        <!ELEMENT DueDate (#PCDATA)>
+        <!ELEMENT Items (Item)*>
+        <!ELEMENT Item (ProductOrService|Description|Quantity|Rate|Amount)*>
+        <!ELEMENT ProductOrService (#PCDATA)>
+        <!ELEMENT Description (#PCDATA)>
+        <!ELEMENT Quantity (#PCDATA)>
+        <!ELEMENT Rate (#PCDATA)>
+        <!ELEMENT Amount (#PCDATA)>
+        <!ELEMENT Summary (Subtotal|SalesTax|Shipping|Total)*>
+        <!ELEMENT Subtotal (#PCDATA)>
+        <!ELEMENT SalesTax (#PCDATA)>
+        <!ELEMENT Shipping (#PCDATA)>
+        <!ELEMENT Total (#PCDATA)>
+        <!ELEMENT CustomerMessage (#PCDATA)>
+        ]>
+<Invoice>
+    <BusinessInformation>
+        <BusinessName>Business name</BusinessName>
+        <Address>
+            <Street>Street address</Street>
+            <City>City</City>
+            <State>State</State>
+            <ZipCode>Zip Code</ZipCode>
+        </Address>
+        <Contact>
+            <Phone>(000) 000-0000</Phone>
+            <Email>Email</Email>
+            <Website>Website</Website>
+        </Contact>
+    </BusinessInformation>
+
+    <ClientInformation>
+        <BillTo>
+            <ClientName>Client name</ClientName>
+            <Address>
+                <Street>Street address</Street>
+                <City>City</City>
+                <State>State</State>
+                <ZipCode>Zip Code</ZipCode>
+            </Address>
+        </BillTo>
+        <ShipTo>
+            <ClientName>Client name</ClientName>
+            <Address>
+                <Street>Street address</Street>
+                <City>City</City>
+                <State>State</State>
+                <ZipCode>Zip Code</ZipCode>
+            </Address>
+        </ShipTo>
+    </ClientInformation>
+
+    <InvoiceDetails>
+        <InvoiceNumber>12345</InvoiceNumber>
+        <InvoiceDate>mm/dd/yyyy</InvoiceDate>
+        <Terms>Net 30</Terms>
+        <DueDate>mm/dd/yyyy</DueDate>
+    </InvoiceDetails>
+
+    <Items>
+        <Item>
+            <ProductOrService>Product or service</ProductOrService>
+            <Description>Describe your product or service</Description>
+            <Quantity>0</Quantity>
+            <Rate>0</Rate>
+            <Amount>0</Amount>
+        </Item>
+        <Item>
+            <ProductOrService>Product or service</ProductOrService>
+            <Description>Describe your product or service</Description>
+            <Quantity>0</Quantity>
+            <Rate>0</Rate>
+            <Amount>0</Amount>
+        </Item>
+        <!-- aqui podemos añadir más items -->
+    </Items>
+
+    <Summary>
+        <Subtotal>0.00</Subtotal>
+        <SalesTax>0.00</SalesTax>
+        <Shipping>0.00</Shipping>
+        <Total>0.00</Total>
+    </Summary>
+
+    <CustomerMessage>
+        Hello! Thank you for your purchase. Please return this invoice with payment. Thanks!
+    </CustomerMessage>
+</Invoice>

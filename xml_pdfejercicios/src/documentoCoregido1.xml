@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE documento [
+        <!ELEMENT documento (p|imagen)*>
+        <!ELEMENT p (destacar)*>
+        <!ELEMENT destacar (#PCDATA)>
+        <!ATTLIST destacar
+                importancia CDATA #REQUIRED>
+        <!ELEMENT imagen (#PCDATA)>
+        <!ATTLIST imagen
+                fichero CDATA #REQUIRED>
+        ]>
+<documento>
+<p>Mi Primer <destacar importancia="1">documento XML</destacar></p>
+<p>Comienza con la etiqueta &lt;documento&gt;</p>
+<p>A continuación colocamos un elemento sin contenido</p>
+<imagen fichero="imagen.gif"/>
+</documento>
